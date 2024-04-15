@@ -1,0 +1,26 @@
+{
+  "name": "kakatelo-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "markdown-it-anchor": "^8.6.7",
+    "vite": "^4.5.1",
+    "vitepress": "1.0.0-rc.35",
+    "vitepress-theme-demoblock": "^2.0.2",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.4",
+    "less": "^4.2.0"
+  }
+}
