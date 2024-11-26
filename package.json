@@ -1,26 +1,55 @@
 {
-  "name": "kakatelo-blog",
+  "name": "auto-i18n-vue",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "generate an internationalized text resource file",
+  "bin": {
+    "auto-i18n-vue": "./bin/index.js",
+    "auto-i18n-zh-wrap-cli": "./bin/zh-wrap/index.js",
+    "auto-i18n-zh-check-cli": "./bin/zh-check/index.js",
+    "auto-i18n-zh-extract-cli": "./bin/zh-extract/index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "bin",
+    "README-zh-extract.md",
+    "README-zh-check.md",
+    "README-zh-wrap.md",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "nyc --reporter=lcov mocha test/unit",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vue-viewer-editor/auto-i18n-vue.git"
+  },
+  "keywords": [
+    "auto",
+    "i18n",
+    "cli"
+  ],
+  "author": "nianqin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vue-viewer-editor/auto-i18n-vue/issues"
+  },
+  "homepage": "https://github.com/vue-viewer-editor/auto-i18n-vue#readme",
   "dependencies": {
-    "markdown-it-anchor": "^8.6.7",
-    "vite": "^4.5.1",
-    "vitepress": "1.0.0-rc.35",
-    "vitepress-theme-demoblock": "^2.0.2",
-    "vue": "^3.4.5",
-    "vue-router": "^4.2.5"
+    "commander": "^3.0.2",
+    "debug": "^4.1.1",
+    "jsonfile": "^5.0.0",
+    "lodash.uniq": "^4.5.0",
+    "map-stream": "0.0.7",
+    "objects-to-csv": "^1.3.6",
+    "translation.js": "^0.7.9",
+    "vinyl-fs": "^3.0.3",
+    "vve-baidu-translate-service": "^3.0.2"
   },
   "devDependencies": {
-    "@types/node": "^18.19.4",
-    "less": "^4.2.0"
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1",
+    "shelljs": "^0.8.3",
+    "standard-version": "^7.0.0"
   }
 }
